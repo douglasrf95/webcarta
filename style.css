@@ -1,0 +1,206 @@
+/* Estilos antigos (corpo, header, cards, etc.) permanecem os mesmos */
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(214, 187, 221, 0.445);
+    color:rgba(214, 187, 221, 0.445);
+    text-align: center;
+}
+
+/* ... (cole aqui todo o CSS da resposta anterior, do header, main, card, footer) ... */
+
+/* Estilos da Página Romântica (que já tínhamos) */
+header{padding:40px 20px;background-color:rgba(214, 187, 221, 0.445)}header h1{font-family:'Dancing Script',cursive;font-size:3em;color:#678d66;margin:0}header p{font-size:1.1em;color:#678d66}main{padding:20px;max-width:500px;margin:0 auto}.card{background-color:#678d66;border-radius:15px;margin-bottom:30px;padding:15px;box-shadow:0 4px 15px rgba(0,0,0,.5);overflow:hidden}.card img{width:100%;border-radius:10px}.card .frase{font-size:1.1em;font-style:italic;color:#fff;line-height:1.6;margin-top:15px}footer{padding:30px 20px;background-color:rgba(214, 187, 221, 0.445)}footer h2{font-family:'Dancing Script',cursive;font-size:2.5em;color:#fff}.song-title{font-size:1.1em;font-weight:700;color:#fff;margin-bottom:15px}audio{width:100%;max-width:350px}.final-message{margin-top:40px;color:#aaa}
+
+
+/* --- NOVOS ESTILOS PARA O LOGIN --- */
+
+#login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa a tela inteira */
+    padding: 20px;
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho */
+}
+
+#login-form {
+    max-width: 400px;
+    width: 100%;
+    padding: 40px;
+    background-color: #678d66;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+#login-form h1 {
+    font-family: 'Dancing Script', cursive;
+    color: #eeededc5;
+    font-size: 2.5em;
+    margin-top: 0;
+}
+
+#login-form p {
+    color: #ccc;
+    margin-bottom: 25px;
+}
+
+#password-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 50px;
+    border: 0px solid #eeededc5;
+    background-color: #eeededc5;
+    color: #0c0c0c;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+#login-form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 50px;
+    background-color: #eeededc5;
+    color: #121212;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#login-form button:hover {
+    background-color: #ffab91;
+}
+
+/* Regra CRUCIAL: Esconde o conteúdo da página por padrão */
+#content-container {
+    display: none;
+}
+/* ... (todos os seus estilos anteriores de body, login, header, etc. continuam aqui) ... */
+
+/* Removemos o estilo do player antigo */
+audio {
+    display: none; /* Esconde o player padrão */
+}
+
+
+/* --- NOVOS ESTILOS DO PLAYER ESTILO SPOTIFY --- */
+.spotify-player {
+    max-width: 400px;
+    margin: 20px auto 0;
+    padding: 20px;
+    background-color: #181818;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #fff;
+}
+
+.album-art img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+.player-controls-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.song-info {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.song-title {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.song-artist {
+    font-size: 0.9em;
+    color: #b3b3b3;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#play-pause-btn {
+    background-color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#play-pause-btn:hover {
+    transform: scale(1.1);
+}
+
+#play-pause-btn svg {
+    width: 24px;
+    height: 24px;
+    fill: #000;
+}
+
+.pause-icon {
+    display: none; /* Começa escondido */
+}
+
+.play-btn.playing .pause-icon {
+    display: block; /* Mostra o pause quando estiver tocando */
+}
+
+.play-btn.playing .play-icon {
+    display: none; /* Esconde o play quando estiver tocando */
+}
+
+
+.progress-bar-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.progress-container {
+    flex-grow: 1;
+    background-color: #404040;
+    height: 4px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.progress {
+    background-color: #1DB954; /* Verde Spotify */
+    width: 0%;
+    height: 100%;
+    border-radius: 2px;
+}
+
+.progress-bar-area span {
+    font-size: 0.8em;
+    color: #b3b3b3;
+}
+
+/* Deixa a mensagem final com um espaço adequado */
+.final-message {
+    margin-top: 40px;
+}
